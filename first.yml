@@ -1,0 +1,10 @@
+-name: Copy
+ hosts: docker_server
+ become: yes
+ 
+ tasks:
+ - name: task copy
+   copy:
+    src: t123/index.html 
+    dest: t123
+ 

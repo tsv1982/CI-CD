@@ -8,6 +8,12 @@
      src: index.html 
      dest: t123
      
-  - name: Just get the list from default pip
-    community.general.pip_package_info:
- 
+  - name: pip install
+    apt:
+     pkg: python3-pip
+     state: present
+     
+  - name: docker install
+    pip:
+     name: docker
+     state: present

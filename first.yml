@@ -7,4 +7,7 @@
     copy:
      src: index.html 
      dest: t123
+     
+  - name: Just get the list from default pip
+    community.general.pip_package_info:
  

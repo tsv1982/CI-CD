@@ -5,6 +5,6 @@
   tasks:
   - name: task copy
     copy:
-     src: t123/index.html 
+     src: index.html 
      dest: t123
  

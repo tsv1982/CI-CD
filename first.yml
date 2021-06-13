@@ -1,6 +1,6 @@
 - name: Copy
   hosts: docker_server
-  become: yes
+  become: no
  
   tasks:
   - name: task copy

@@ -4,15 +4,21 @@
 
 
   tasks:
-  - name: task copy
+  - name: copy war
     copy:
      src: target/
-     dest: t123/
+     dest: CI-CD/target/
  
-  - name: task copy2
+  - name: copy docker
     copy:
      src: docker/
-     dest: t123/
+     dest: CI-CD/
+     
+  - name: copy mysql-dump
+    copy:
+     src: mysql-dump/
+     dest: CI-CD/mysql-dump/
+  
       
   - name: pip install
     apt:

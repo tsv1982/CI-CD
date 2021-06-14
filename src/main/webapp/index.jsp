@@ -42,11 +42,7 @@
                           ResultSet resultSet = st.executeQuery("SELECT * FROM USER");
                           
                       while(resultSet.next()){
-                        String userName = resultSet.getString(2); 
-                        String password = resultSet.getString(3);
                         String firstName = resultSet.getString(1);
-                        String lastName = resultSet.getString(5);
-                        String email = resultSet.getString(6);
                         out.println("User = " + firstName + "<br>");
                       }
                      %>

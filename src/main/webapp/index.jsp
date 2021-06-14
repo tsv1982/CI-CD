@@ -35,7 +35,7 @@
                         "testuser", "root");
                          Statement st = con.createStatement();
                          
-                          ResultSet resultSet = statement.executeQuery("SELECT * FROM USER");
+                          ResultSet resultSet = st.executeQuery("SELECT * FROM USER");
                          
                     
                      

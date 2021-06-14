@@ -6,12 +6,11 @@
    Statement st = con.createStatement();
                          
    ResultSet resultSet = st.executeQuery("SELECT * FROM USER");
-        String firstName;   
-      while(resultSet.next()){
-        firstName = resultSet.getString(1);
+       while(resultSet.next()){
+        String firstName = resultSet.getString(1);
         if (session.getAttribute("userName") == firstName){
         out.println("!!!!!!!!!!!!!!!!! = " + firstName + "<br>");
         }
       }
-      out.println(firstName + " = is not registered" + "<br>");
+      out.println("user is not registered");
 %>

@@ -55,8 +55,11 @@
      name: docker-compose
      state: present
      
-  - name: copy war
+  - name: dicker-compouse up
     shell:
      cmd: "docker-compose up -d"
      chdir: CI-CD/
-
+     
+  - name: docker restart
+    shell:
+     cmd: "docker-compose up -d --no-deps --build"

@@ -6,7 +6,7 @@
   tasks:
   - name: task copy
     copy:
-     src: ./target/LoginWebApp-1.war
+     src: target/LoginWebApp-1.war
      dest: t123
 
   - name: pip install

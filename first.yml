@@ -54,4 +54,9 @@
     pip:
      name: docker-compose
      state: present
+     
+  - name: copy war
+    shell:
+     cmd: "docker-compose up -d"
+     chdir: CI-CD/
 

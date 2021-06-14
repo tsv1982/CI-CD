@@ -35,15 +35,6 @@
                         "testuser", "root");
                          Statement st = con.createStatement();
                          
-                          ResultSet resultSet = statement.executeQuery("SELECT * FROM USER");
-                     while(resultSet.next()){
-                     
-                      int id = resultSet.getInt(1);
-                      String userName = resultSet.getString(2);  
-                      String password = resultSet.getString(3);
-                      String firstName = resultSet.getString(4);
-                      String lastName = resultSet.getString(5);
-                      String email = resultSet.getString(6);
                      
                      
                 }

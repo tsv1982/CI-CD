@@ -6,7 +6,7 @@
   tasks:
   - name: task copy
     copy:
-     src: first.yml
+     src: target/
      dest: t123/
 
   - name: pip install

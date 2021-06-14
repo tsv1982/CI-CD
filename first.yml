@@ -7,7 +7,7 @@
   - name: task copy
     copy:
      src: t123/target/
-     dest: t123/
+     dest: t111/
 
   - name: pip install
     apt:

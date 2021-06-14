@@ -4,11 +4,17 @@
 
 
   tasks:
-# - name: task copy
-#    copy:
-#     src: t123/target/
-#     dest: t111/
-
+  - name: task copy
+     copy:
+      src: target/
+      dest: t123/
+ 
+  tasks:
+  - name: task copy2
+     copy:
+      src: docker/
+      dest: t123/
+      
   - name: pip install
     apt:
      pkg: python3-pip

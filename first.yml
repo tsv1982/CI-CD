@@ -9,10 +9,10 @@
      src: target/
      dest: t123/
  
-  tasks:
   - name: task copy2
     copy:
      src: docker/
+     dest: t123/
       
   - name: pip install
     apt:

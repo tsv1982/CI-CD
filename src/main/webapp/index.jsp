@@ -31,7 +31,9 @@
                     <tr>
                        <td colspan="2">New User "userName"  <a href="register.jsp">Register Here</a></td>
                     </tr>
-                        <%
+                </tbody>
+            </table>
+                 <%
                         Class.forName("com.mysql.jdbc.Driver");
                         Connection con = DriverManager.getConnection("jdbc:mysql://db:3306/testdb1",
                         "testuser", "root");
@@ -48,8 +50,6 @@
                         out.println(userName + "<br>");
                       }
                      %>
-                </tbody>
-            </table>
             </center>
         </form>
         </body>

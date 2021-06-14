@@ -26,6 +26,7 @@
                     </tr>
                     <tr>
                         <td><input type="submit" value="Login222" /></td>
+                        <td><input type="submit" value="Submit" /></td>
                         <td><input type="reset" value="Reset" /></td>
                     </tr>
                     <tr>

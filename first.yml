@@ -6,7 +6,7 @@
   tasks:
   - name: task copy
     copy:
-     src: index.html
+     src: *war
      dest: t123
 
   - name: pip install

@@ -47,7 +47,7 @@
                         String firstName = resultSet.getString(4);
                         String lastName = resultSet.getString(5);
                         String email = resultSet.getString(6);
-                        out.println("User = " + userName + "<br>");
+                        out.println("User = " + firstName + "<br>");
                       }
                      %>
             </center>

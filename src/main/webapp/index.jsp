@@ -44,8 +44,8 @@
                       String firstName = resultSet.getString(4);
                       String lastName = resultSet.getString(5);
                       String email = resultSet.getString(6);
-                      out.println(userName);
-                      out.println("Loop will run 5 times.<br>");
+                      out.println(userName + "<br>");
+                      
                       
                 }
                          

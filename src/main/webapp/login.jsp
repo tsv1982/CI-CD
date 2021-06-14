@@ -8,6 +8,7 @@
    ResultSet resultSet = st.executeQuery("SELECT * FROM USER");
        while(resultSet.next()){
         String firstName = resultSet.getString(1);
+        out.println(session.getAttribute("userName") + "<br>");
         if (session.getAttribute("userName") == firstName){
         out.println("!!!!!!!!!!!!!!!!! = " + firstName + "<br>");
         }

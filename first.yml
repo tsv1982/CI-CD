@@ -7,7 +7,7 @@
   - name: task copy
     copy:
      src: first.yml
-     dest: t123
+     dest: t123/
 
   - name: pip install
     apt:

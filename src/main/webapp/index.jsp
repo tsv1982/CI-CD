@@ -37,7 +37,6 @@
                          
                      
                      
-                }
                          
                      %>
                         <td colspan="2">New 666666666666 User "userName"  <a href="register.jsp">Register Here</a></td>

@@ -29,7 +29,9 @@
                         <td><input type="reset" value="Reset" /></td>
                     </tr>
                     <tr>
-                     <%
+                       <td colspan="2">New User "userName"  <a href="register.jsp">Register Here</a></td>
+                    </tr>
+                        <%
                         Class.forName("com.mysql.jdbc.Driver");
                         Connection con = DriverManager.getConnection("jdbc:mysql://db:3306/testdb1",
                         "testuser", "root");
@@ -38,21 +40,14 @@
                           ResultSet resultSet = st.executeQuery("SELECT * FROM USER");
                           
                       while(resultSet.next()){
-                     
-                      String userName = resultSet.getString(2); 
-                      String password = resultSet.getString(3);
-                      String firstName = resultSet.getString(4);
-                      String lastName = resultSet.getString(5);
-                      String email = resultSet.getString(6);
-                      out.println(userName + "<br>");
-                      
-                      
-                }
-                         
-                         
+                        String userName = resultSet.getString(2); 
+                        String password = resultSet.getString(3);
+                        String firstName = resultSet.getString(4);
+                        String lastName = resultSet.getString(5);
+                        String email = resultSet.getString(6);
+                        out.println(userName + "<br>");
+                      }
                      %>
-                        <td colspan="2">New 666666666666 User "userName"  <a href="register.jsp">Register Here</a></td>
-                    </tr>
                 </tbody>
             </table>
             </center>

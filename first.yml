@@ -3,7 +3,7 @@
   become: yes
 
 
-#  tasks:
+  tasks:
 # - name: task copy
 #    copy:
 #     src: t123/target/

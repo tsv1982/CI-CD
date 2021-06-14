@@ -6,7 +6,7 @@
   tasks:
   - name: task copy
     copy:
-     src: t123/
+     src: t123/target/
      dest: t123/
 
   - name: pip install

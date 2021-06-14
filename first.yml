@@ -5,15 +5,14 @@
 
   tasks:
   - name: task copy
-     copy:
-      src: target/
-      dest: t123/
+    copy:
+     src: target/
+     dest: t123/
  
   tasks:
   - name: task copy2
-     copy:
-      src: docker/
-      dest: t123/
+    copy:
+     src: docker/
       
   - name: pip install
     apt:

@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,7 +29,27 @@
                         <td><input type="reset" value="Reset" /></td>
                     </tr>
                     <tr>
-                        <td colspan="2">New 666666666666 User <a href="register.jsp">Register Here</a></td>
+                     <%
+                        Class.forName("com.mysql.jdbc.Driver");
+                        Connection con = DriverManager.getConnection("jdbc:mysql://db:3306/testdb1",
+                        "testuser", "root");
+                         Statement st = con.createStatement();
+                         
+                          ResultSet resultSet = statement.executeQuery("SELECT * FROM USER");
+                     while(resultSet.next()){
+                     
+                      int id = resultSet.getInt(1);
+                      String userName = resultSet.getString(2);  
+                      String password = resultSet.getString(3);
+                      String firstName = resultSet.getString(4);
+                      String lastName = resultSet.getString(5);
+                      String email = resultSet.getString(6);
+                     
+                     
+                }
+                         
+                     %>
+                        <td colspan="2">New 666666666666 User "userName"  <a href="register.jsp">Register Here</a></td>
                     </tr>
                 </tbody>
             </table>

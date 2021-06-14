@@ -6,9 +6,9 @@
    Statement st = con.createStatement();
                          
    ResultSet resultSet = st.executeQuery("SELECT * FROM USER");
-              
+        String firstName;   
       while(resultSet.next()){
-        String firstName = resultSet.getString(1);
+        firstName = resultSet.getString(1);
         if (session.getAttribute("userName") == firstName){
         out.println("!!!!!!!!!!!!!!!!! = " + firstName + "<br>");
         }

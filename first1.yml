@@ -1,0 +1,8 @@
+- name: Copy
+  hosts: docker_server
+  become: yes
+
+  - name: docker restart
+    shell:
+     cmd: "docker-compose up -d --no-deps --build"
+     chdir: CI-CD/

@@ -1,6 +1,12 @@
 - name: Docker restart
   hosts: docker_server
   become: yes
+  
+    tasks:
+  - name: copy war
+    copy:
+     src: target/
+     dest: CI-CD/target/
 
   - name: docker restart
     shell:

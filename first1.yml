@@ -2,7 +2,7 @@
   hosts: docker_server
   become: yes
   
-    tasks:
+  tasks:
   - name: copy war
     copy:
      src: target/

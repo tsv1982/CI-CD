@@ -1,4 +1,4 @@
-- name: Copy
+- name: Docker restart
   hosts: docker_server
   become: yes
 

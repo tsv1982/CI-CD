@@ -29,8 +29,7 @@
                         <td><input type="reset" value="Reset" /></td>
                     </tr>
                     <tr>
-                       <td colspan="2"> 33333333333 New User "userName "  <a href="register.jsp">Register Here</a></td>
-                        <td colspan="2"> 33333333333333 "userName "  <a href="register.jsp">Register Here</a></td>
+                       <td colspan="2">9999999999999999 New User "userName "  <a href="register.jsp">Register Here</a></td>
                     </tr>
                 </tbody>
             </table>

@@ -1,4 +1,4 @@
-- name: Copy
+- name: tomcat web 
   hosts: docker_server
   become: yes
 

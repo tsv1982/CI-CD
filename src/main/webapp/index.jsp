@@ -29,7 +29,7 @@
                         <td><input type="reset" value="Reset" /></td>
                     </tr>
                     <tr>
-                       <td colspan="2">" New User "userName "  <a href="register.jsp">Register Here</a></td>
+                       <td colspan="2">" Sergey New User "userName "  <a href="register.jsp">Register Here</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -38,9 +38,9 @@
                         Connection con = DriverManager.getConnection("jdbc:mysql://db:3306/testdb1",
                         "testuser", "root");
                          Statement st = con.createStatement();
-                         
+
                           ResultSet resultSet = st.executeQuery("SELECT * FROM USER");
-                          
+
                       while(resultSet.next()){
                         String firstName = resultSet.getString(1);
                         out.println("User = " + firstName + "<br>");

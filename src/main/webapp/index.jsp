@@ -12,7 +12,7 @@
             <table border="0" width="30%" cellpadding="3">
                 <thead>
                     <tr>
-                        <th colspan="2"> 7777777777777 VERSITY <br> login page</th>
+                        <th colspan="2"> 7777777 VERSITY <br> login page</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -17,6 +17,6 @@ node {
       sh 'ssh tsv@192.168.1.131 \'ansible-playbook /home/tsv/CI-CD/first.yml\' '
    }
     stage('start_job_git'){
-      build job: 'job_git'
+      build job: 'job_ansible_webhook'
    }
 }

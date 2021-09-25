@@ -7,6 +7,7 @@ node {
        sh "${mvnHome}/bin/mvn clean package" 
    }
    stage('copy_file'){
+      sh 'ssh tsv@192.168.0.131'
       sh 'scp -r target tsv@192.168.0.131:/home/tsv/CI-CD/'
       sh 'scp -r docker tsv@192.168.0.131:/home/tsv/CI-CD/'
       sh 'scp -r mysql-dump tsv@192.168.0.131:/home/tsv/CI-CD/'

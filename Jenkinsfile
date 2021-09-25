@@ -1,6 +1,6 @@
 node {
    stage('git'){
-       git credentialsId: '502a475a-5798-4617-9367-1f84208c9ce0', url: 'git@github.com:tsv1982/CI-CD.git'
+       git credentialsId: '7a6f8112-7864-4ba9-bafb-cf379e82be2d', url: 'git@github.com:tsv1982/CI-CD.git'
    } 
    def mvnHome = tool name: 'maven', type: 'maven'  
    stage('build'){

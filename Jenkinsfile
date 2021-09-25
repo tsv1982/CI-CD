@@ -7,14 +7,14 @@ node {
        sh "${mvnHome}/bin/mvn clean package" 
    }
    stage('copy_file'){
-      sh 'scp -r target tsv@192.168.0.140:/home/tsv/CI-CD/'
-      sh 'scp -r docker tsv@192.168.0.140:/home/tsv/CI-CD/'
-      sh 'scp -r mysql-dump tsv@192.168.0.140:/home/tsv/CI-CD/'
-      sh 'scp -r first.yml tsv@192.168.0.140:/home/tsv/CI-CD/'
-      sh 'scp -r p_docker_restart.yml tsv@192.168.0.140:/home/tsv/CI-CD/'
+      sh 'scp -r target tsv3@192.168.0.140:/home/tsv/CI-CD/'
+      sh 'scp -r docker tsv3@192.168.0.140:/home/tsv/CI-CD/'
+      sh 'scp -r mysql-dump tsv3@192.168.0.140:/home/tsv/CI-CD/'
+      sh 'scp -r first.yml tsv3@192.168.0.140:/home/tsv/CI-CD/'
+      sh 'scp -r p_docker_restart.yml tsv3@192.168.0.140:/home/tsv/CI-CD/'
    }
    stage('start_playbook'){
-      sh 'ssh tsv@192.168.0.140 \'ansible-playbook /home/tsv/CI-CD/first.yml\' '
+      sh 'ssh tsv3@192.168.0.140 \'ansible-playbook /home/tsv/CI-CD/first.yml\' '
    }
 //    stage('start_job_git'){
 //      build job: 'job_ansible_webhook'

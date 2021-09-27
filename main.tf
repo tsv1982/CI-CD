@@ -16,10 +16,6 @@ resource "tls_private_key" "dev_key" {
 resource "aws_key_pair" "generated_key" {
   key_name   = var.generated_key_name
   public_key = tls_private_key.dev_key.public_key_openssh
-  user_data              = <<EOF
-#!/bin/bash
-echo "<h2>WebServer with IP: $myip</h2><br>Build by Terraform!"  >  /var/www/html/index.html
-EOF
   
   
   provisioner "local-exec" {    # Generate "terraform-key-pair.pem" in current directory

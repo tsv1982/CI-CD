@@ -35,7 +35,7 @@ resource "aws_instance" "my_webserver" {
 
 
 provisioner "local-exec" {
-    command = "echo '[docker_server]\nserver1 ansible_host=${aws_instance.my_webserver.public_ip}' > file.txt"
+    command = "echo '[docker_server]\nserver1 ansible_host=${aws_instance.my_webserver.public_ip}' > hosts"
 
   }
     tags = {

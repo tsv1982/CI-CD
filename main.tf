@@ -36,7 +36,8 @@ resource "aws_instance" "my_webserver" {
 
 
 provisioner "local-exec" {
-    command = "echo '[docker_server]\nserver1 ansible_host=${aws_instance.my_webserver.public_ip}' > hosts"
+    command = "echo '[docker_server]\nserver1 ansible_host=${aws_instance.my_webserver.public_ip}\n[docker_server:vars]\nansible_ssh_user=ubuntu\nansible_ssh_private_key_file=/home/tsv/.ssh/${var.generated_key_name}.pem ' > hosts"
+    
 
   }
     tags = {

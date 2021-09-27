@@ -32,8 +32,8 @@ resource "aws_instance" "my_webserver" {
   ami                    = "ami-05f7491af5eef733a"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.my_webserver.id]
-  key_name      = var.generated_key_name
-
+  key_name               = var.generated_key_name
+  user_data              = file("user_data.sh")
 
 provisioner "local-exec" {
     command = "echo '[docker_server]\nserver1 ansible_host=${aws_instance.my_webserver.public_ip}\n[docker_server:vars]\nansible_ssh_user=ubuntu\nansible_ssh_private_key_file=/home/tsv/.ssh/${var.generated_key_name}.pem ' > hosts"

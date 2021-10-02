@@ -7,6 +7,8 @@ node {
        sh "${mvnHome}/bin/mvn clean package" 
    }
    stage('copy_file'){
+      sh 'echo "[docker_server]\nserver1 ansible_host=192.168.1.132" > hosts'
+      sh 'scp -r hosts tsv@192.168.1.131:/etc/ansible/'
       sh 'scp -r target tsv@192.168.1.131:/home/tsv/CI-CD/'
       sh 'scp -r docker tsv@192.168.1.131:/home/tsv/CI-CD/'
       sh 'scp -r mysql-dump tsv@192.168.1.131:/home/tsv/CI-CD/'

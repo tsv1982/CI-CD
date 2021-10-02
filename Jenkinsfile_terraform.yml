@@ -1,0 +1,31 @@
+node {
+//   stage('git'){
+//      git credentialsId: '502a475a-5798-4617-9367-1f84208c9ce0', url: 'git@github.com:tsv1982/CI-CD.git'
+//   } 
+//def mvnHome = tool name: 'maven', type: 'maven'  
+//   stage('build'){
+//       sh "${mvnHome}/bin/mvn clean package" 
+//   }
+
+   stage('Provision infrastructure') {
+//       sh 'terraform init'
+//       sh 'terraform plan -out=plan'
+//       sh 'terraform apply -auto-approve'
+//       sh 'scp -r hosts tsv@192.168.1.131:/etc/ansible/'
+        sh 'terraform destroy -auto-approve'
+//       sh 'echo $AWS_ACCESS_KEY_ID'
+//       sh 'scp -r target tsv@192.168.1.131:/home/tsv/CI-CD/'
+//       sh 'scp -r docker tsv@192.168.1.131:/home/tsv/CI-CD/'
+//       sh 'scp -r mysql-dump tsv@192.168.1.131:/home/tsv/CI-CD/'
+//       sh 'scp -r first.yml tsv@192.168.1.131:/home/tsv/CI-CD/'
+//       sh 'scp -r p_docker_restart.yml tsv@192.168.1.131:/home/tsv/CI-CD/'
+//       sh 'scp -r terraform-key-pair.pem tsv@192.168.1.131:/home/tsv/.ssh/'
+   }
+   
+//   stage('start_playbook'){
+//      sh 'ssh tsv@192.168.1.131 \'ansible-playbook /home/tsv/CI-CD/first.yml\' '
+//  }
+//    stage('start_job_git'){
+//      build job: 'job_ansible_webhook'
+//   }
+}

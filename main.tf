@@ -42,7 +42,7 @@ provisioner "local-exec" {
   }
     tags = {
     Name = "Web Server Build by Terraform"
-    Owner = "Denis Astahov"
+    Owner = "Serhii Tarabanov"
   }
 }
 
@@ -97,6 +97,6 @@ resource "aws_security_group" "my_webserver" {
 
   tags = {
     Name = "Web Server SecurityGroup"
-    Owner = "Denis Astahov"
+    Owner = "Serhii Tarabanov"
   }
 }

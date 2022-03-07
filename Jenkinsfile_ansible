@@ -20,6 +20,6 @@ node {
    }
 //    stage('start_job_git'){
 //      build job: 'job_ansible_webhook'
-
+ttt
 //   }
 }

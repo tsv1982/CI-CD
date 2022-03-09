@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    stages {
+    stages{ 
         stage('Hello') {
             steps {
                 echo 'Hello World'
@@ -19,6 +19,6 @@ pipeline {
                        -Dsonar.host.url=http://192.168.1.16:9000 \\'''
             }
         }
-        }    
-    }
+    }    
+    
 }

@@ -1,25 +1,46 @@
 pipeline {
     agent any
 
+  environment {
+      DOCKER_VERSION_TAG = getVersion()
+    }
+    
     stages{ 
-        stage('Hello') {
+      
+        stage('Git') {
             steps {
-                echo 'Hello World'
-            }
+             git credentialsId: 'git_key', url: 'https://github.com/tsv1982/CI-CD.git'
+           }
         }
+        
         stage('build'){
             steps {  
                 sh "mvn clean package" 
             }
         }
-        stage('sonar'){
-            steps{
-                sh '''mvn sonar:sonar \\
-                       -Dsonar.projectKey=test \\
-                       -Dsonar.host.url=http://192.168.1.16:9000 \\
-                       -Dsonar.login=da88b8610ac7215ad9a8be9495db86b3c1b241bf\\'''
+        
+        stage('docker build'){
+            steps {
+                sh 'docker-compose build'
             }
         }
-    }    
-    
+        
+        stage('Docker push'){
+            steps {
+                 echo "${DOCKER_VERSION_TAG}"
+                 withCredentials([string(credentialsId: 'docker_pas', variable: 'dockerHab_pas')]) {
+                     sh "docker login -u tsv1982 -p ${dockerHab_pas}"
+                 }
+                 sh 'docker tag tomcat:latest tsv1982/tomcat:${DOCKER_VERSION_TAG}'
+                 sh 'docker push tsv1982/tomcat:${DOCKER_VERSION_TAG}'
+                  
+            }
+        }
+    } 
+
+}
+
+def getVersion(){
+    def commitHash = sh label: '', returnStdout: true, script: 'git rev-parse --short HEAD'
+    return commitHash
 }

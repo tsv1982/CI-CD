@@ -13,6 +13,18 @@ pipeline {
            }
         }
         
+        stage('sonar'){
+            steps {
+            withCredentials([string(credentialsId: 'sonar_token', variable: 'sonar-pwd')]) {
+                   sh '''mvn sonar:sonar \\
+                         -Dsonar.projectKey=tomcat_test1 \\
+                         -Dsonar.host.url=http://192.168.1.18:9000 \\
+                         -Dsonar.login=25dbeed397414b1c25577b669410fddc1dbcf32e'''
+//-Dsonar.login=${sonar-pwd}'''
+               }
+            }
+        }
+        
         stage('build'){
             steps {  
                 sh "mvn clean package" 
